@@ -41,11 +41,12 @@ header {
     padding: 20px;
 }
 
-nav, a {
+nav,
+a {
     background-color: #FB2576;
     color: white;
     padding: 20px;
-    text-decoration:underline;
+    text-decoration: underline;
 }
 
 footer {
@@ -54,14 +55,53 @@ footer {
     padding: 20px;
 }
 
-#Facebooklink{
+.PicsCars {
+    width: 350px;
+    /*Estilos de los bordes*/
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.boton_comprar {
+    color: black;
+    width: 100px;
+
+    /*Estilos de los bordes*/
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+#Facebooklink {
     background-color: #332FD0;
 }
 
-#Instagramlink{
+#Instagramlink {
     background-color: #332FD0;
 }
 
-#Whatsapplink{
+#Whatsapplink {
     background-color: #332FD0;
 }
