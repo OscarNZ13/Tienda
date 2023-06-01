@@ -7,31 +7,23 @@
 /* Estilos generales de la página */
 body {
     margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* Estilos para el contenido principal */
-main {
-    flex: 1;
-    display: flex;
 }
 
 /* Estilos para la sección principal */
 section {
     background-color: #330c53;
-    color: white;
-    flex: 2;
-    padding: 20px;
+    color: white;   
+    float: right;
+    margin-left: 145px;
 }
 
 /* Estilos para la barra lateral */
 aside {
     background-color: #FB2576;
-    flex: 1;
-    padding: 20px;
+    width: 10%;
+    height: 100%;
+    padding-right: 200px;
+    float: left;
 }
 
 /* Estilos para el encabezado, barra de navegación y pie de página */
@@ -51,17 +43,18 @@ nav, a {
 footer {
     background-color: #332FD0;
     color: white;
-    padding: 20px;
+    padding: 10px;
+    margin-top: 100px;
 }
 
 #Facebooklink{
-    background-color: #332FD0;
+    background-color: #322fd000;
 }
 
 #Instagramlink{
-    background-color: #332FD0;
+    background-color: #322fd000;
 }
 
 #Whatsapplink{
-    background-color: #332FD0;
+    background-color: #322fd000;
 }
