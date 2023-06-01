@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/css.css" rel="stylesheet" />
+    <title>Video</title>
+</head>
+
+<body>
+    <header>
+        <h1>Videos</h1>
+    </header>
+
+    <nav>
+        <a href="Page_Ford.html" id="fordlink">Ford</a>
+        <a href="Page_Chevrolet.html" id="chevroletlink">Chevrolet</a>
+        <a href="Page_Dodge.html" id="dodgelink">Dodge</a>
+        <a href="Page_Audio.html" id="Audiolink">Audio</a>
+        <a href="Page_Video.html" id="Videolink">Video</a>
+        <a href="Page_Formularios.html" id="Formularioslink">Formularios</a>
+    </nav>
+
+    <section>
+        <h1>
+            Ejemplo De Video
+        </h1>
+
+        <!--Video almacenado en nuestro equipo-->
+        <figure>
+            <video width="320" height="240" controls autoplay muted>
+                <source src="videos/torpedo.mp4" type="video/mp4">
+            </video>
+        </figure>
+    </section>
+
+    <!--Video hosteado mediante link-->
+    <div>
+        <h2>
+            Ejemplo De Iframe
+        </h2>
+        <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/N8SM2gdhq_Y" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+    </div>
+
+    <!--Pagina embebida dentro de la pagina-->
+    <div>
+        <h2>
+            Ejemplo De Iframe 2
+        </h2>
+        <iframe src="https://www.fidelitasvirtual.org/moodle3/course/view.php?id=56137&section=3#tabs-tree-start"
+            title="Video de YouTube" width="500" height="500"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; clipboard-write"
+            allowfullscreen></iframe>
+    </div>
+</body>
+
+</html>

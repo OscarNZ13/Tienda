@@ -1,8 +1,60 @@
-p{
-    background-color: aquamarine;
-    color: black;
-    font-family: 'Times New Roman', Times, serif;
+* {
+    /*Con el * se cambia toda la font-family de la pagina*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-    font-size: 18px;
 }
 
+/* Estilos generales de la página */
+body {
+    margin: 0;
+}
+
+/* Estilos para la sección principal */
+section {
+    background-color: #330c53;
+    color: white;   
+    float: right;
+    margin-left: 145px;
+}
+
+/* Estilos para la barra lateral */
+aside {
+    background-color: #FB2576;
+    width: 10%;
+    height: 100%;
+    padding-right: 200px;
+    float: left;
+}
+
+/* Estilos para el encabezado, barra de navegación y pie de página */
+header {
+    background-color: #332FD0;
+    color: white;
+    padding: 20px;
+}
+
+nav, a {
+    background-color: #FB2576;
+    color: white;
+    padding: 20px;
+    text-decoration:underline;
+}
+
+footer {
+    background-color: #332FD0;
+    color: white;
+    padding: 10px;
+    margin-top: 100px;
+}
+
+#Facebooklink{
+    background-color: #322fd000;
+}
+
+#Instagramlink{
+    background-color: #322fd000;
+}
+
+#Whatsapplink{
+    background-color: #322fd000;
+}
