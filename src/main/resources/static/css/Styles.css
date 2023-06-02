@@ -1,0 +1,84 @@
+* {
+    /*Con el * se cambia toda la font-family de la pagina*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 0;
+    border-radius: 8px;
+}
+
+/* Estilos del encabezado */
+.header {
+    background-color: #332FD0;
+    color: white;
+    padding-top: 20px;
+    width: 100%;
+    height: 65px;
+}
+
+.nav{
+    background-color: #FB2576;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    width: 100%;
+    height: 100%;
+    box-shadow: -1px 1px 5px 0px black;
+}
+
+.main{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: calc(100vh - 200px);
+    display: flex;
+
+    /* Para alinear contenido de izquierda a derecha(Horizontal)
+    justify-content: center;
+    */
+
+    /* Para alinear contenido de arriba para abajo(Vertical)*/
+    align-items: center;
+}
+
+.section{
+    background-color: #330c53;
+    color: white; 
+    padding-left: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.aside {
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #FB2576;
+    color: white;
+    width: 25%;
+    height: 100%;
+}
+
+.footer {
+    background-color: #332FD0;
+    color: white;
+    padding-top: 20px;
+    width: 100%;
+    height: 50px;
+}
+
+a{
+    color: white;
+}
+
+.PicsCarsFord{
+    max-width: 200px;
+    height: auto;
+}
+
+.PicsCarsChev{
+    max-width: 270px;
+    height: auto;
+}
+
+.PicsCarsDodge{
+    max-width: 290px;
+    height: auto;
+}
