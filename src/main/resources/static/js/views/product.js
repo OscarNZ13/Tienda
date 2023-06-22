@@ -29,7 +29,7 @@ $(document).on("click", ".btnDeleteProduct", function () {
         contentType: "application/json",
         dataType: 'json',
         type: 'POST',
-        success: function (result) { //Quitar y mejoraf eel location reload
+        success: function (result) { //Quitar y mejorar el location reload
             location.reload();
         },
         //here we are serialization the object
