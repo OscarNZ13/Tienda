@@ -1,13 +1,13 @@
 package com.Tienda.service;
 
-import com.Tienda.entities.Product;
 import java.util.List;
+import java.util.Optional;
 
-public interface IProductService {
+import com.Tienda.entities.Product;
 
-    List<Product> getAllProducts();
+public interface IProductService extends IBaseService<Product, Integer> {
 
-    void save(Product product);
-
-    void delete(Product product);
+    //La palabra "optional" quiere decir que puede recibir uno solamente de los 2 parametros que le damos, 
+    //o no puede recibor ninguno
+    List<Product> getProductsWithFilters(Optional<Integer> lowerPrice, Optional<Integer> higherPrice);
 }
