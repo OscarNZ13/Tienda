@@ -61,24 +61,29 @@ public class ProjectConfig implements WebMvcConfigurer {
         registry.addViewController("/login").setViewName("login");
         registry.addViewController("/registro/nuevo").setViewName("/registro/nuevo");
     }
- 
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
+                //Permisos de todos:
                 .authorizeHttpRequests((request) -> request
-                .requestMatchers("/","/index","/errores/**",
-                        "/carrito/**","/pruebas/**","/reportes/**",
-                        "/registro/**","/js/**","/webjars/**")
-                        .permitAll()
+                .requestMatchers("/", "/index", "/errores/**",
+                        "/carrito/**", "/pruebas/**", "/reportes/**",
+                        "/registro/**", "/js/**", "/webjars/**")
+                .permitAll()
+
+                //Rol del user y sus permisos:
                 .requestMatchers(
-                        "/producto/nuevo","/producto/guardar",
-                        "/producto/modificar/**","/producto/eliminar/**",
-                        "/categoria/nuevo","/categoria/guardar",
-                        "/categoria/modificar/**","/categoria/eliminar/**",
-                        "/usuario/nuevo","/usuario/guardar",
-                        "/usuario/modificar/**","/usuario/eliminar/**",
+                        "/producto/nuevo", "/producto/guardar",
+                        "/producto/modificar/**", "/producto/eliminar/**",
+                        "/categoria/nuevo", "/categoria/guardar",
+                        "/categoria/modificar/**", "/categoria/eliminar/**",
+                        "/usuario/nuevo", "/usuario/guardar",
+                        "/usuario/modificar/**", "/usuario/eliminar/**",
                         "/reportes/**"
                 ).hasRole("ADMIN")
+
+                //Permisos del login:
                 .requestMatchers(
                         "/producto/listado",
                         "/categoria/listado",
@@ -94,7 +99,7 @@ public class ProjectConfig implements WebMvcConfigurer {
     }
 
     /* El siguiente método se utiliza para completar la clase no es 
-    realmente funcional, la próxima semana se reemplaza con usuarios de BD */   
+    realmente funcional, la próxima semana se reemplaza con usuarios de BD */
     @Bean
     public UserDetailsService users() {
         UserDetails admin = User.builder()
