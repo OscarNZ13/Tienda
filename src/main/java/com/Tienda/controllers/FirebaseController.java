@@ -2,7 +2,6 @@ package com.Tienda.controllers;
 
 import com.Tienda.dto.PostDTO;
 import com.Tienda.service.IFirebaseService;
-import com.Tienda.service.impl.FirebaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
