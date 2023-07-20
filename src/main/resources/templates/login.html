@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html th:attr="lang=${lang}" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html th:attr="lang=${lang}" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6"
+>
 <head th:insert="~{template.html :: head}"></head>
 <body>
 <div th:insert="~{template.html :: nav}"></div>
-<div class="container my-5">
+<div class="container my-5"  >
     <div class="row align-items-center">
         <div class="col-md-3"></div>
         <div class="col-md-6">
-            <div class="card">
+            <div class="card" >
                 <div class="card-header bg-success"><h2>[[#{login.login}]]</h2></div>
-                <div class="card-body">
+                <div class="card-body" >
                     <form method="POST" th:action="@{/login}">
                         <div class="form-group row my-3">
                             <label class="col-md-5 my-auto" for="username"><i class="fas fa-user-lock"></i>[[#{login.username}]]:</label>
