@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html th:attr="lang=${lang}" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html th:attr="lang=${lang}" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6"
+>
 
 <head th:insert="~{template.html :: head}"></head>
 
@@ -25,7 +26,9 @@
                             <td><span th:text="${category.descripcion}"> </span></td>
                             <td><img alt="..." class="card-img-top" th:src="${category.ruta_imagen}">
                             </td>
-                            <td>
+                            <!-- sec:authorize="hasRole('ROLE_ADMIN')" esta linea da 
+                            autorizacion a la seccion solamente a los usuarios con rol admin-->
+                            <td sec:authorize="hasRole('ROLE_ADMIN')">
                                 <button class="btn btn-primary open-modal" data-bs-target="#Modal"
                                     data-bs-toggle="modal" th:attr="idCategory=${category.id}" type="button">
                                     edit
