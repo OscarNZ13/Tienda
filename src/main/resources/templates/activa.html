@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html th:attr="lang=${lang}" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+
+<head th:insert="~{template.html :: head}"></head>
+
+<body>
+    <header>
+        <div th:insert="~{template.html :: nav}"></div>
+    </header>
+
+    <section th:insert="~{registro.html :: activarUsuario}"></section>
+    
+    <footer>
+        <div th:insert="~{template.html :: footer}"></div>
+    </footer>
+</body>
+
+</html>
