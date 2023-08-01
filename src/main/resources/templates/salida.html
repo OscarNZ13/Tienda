@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html th:attr="lang=${lang}" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+
+<head th:insert="~{template.html :: head}"></head>
+
+<body>
+    <header>
+        <div th:insert="~{template.html :: nav}"></div>
+    </header>
+
+    <div class="row py-2 justify-content-center">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header align-items-center">
+                    [[${titulo}]]
+                </div>
+                <div class="card-body">
+                    <strong>[[${mensaje}]]</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div th:insert="~{template.html :: footer}"></div>
+    </footer>
+</body>
+
+</html>
