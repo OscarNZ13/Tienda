@@ -1,6 +1,7 @@
 package com.Tienda.service.impl;
 
 import com.Tienda.db.IProductRepository;
+import com.Tienda.entities.Item;
 import com.Tienda.entities.Product;
 import com.Tienda.service.IProductService;
 import java.util.List;
@@ -33,5 +34,11 @@ public class ProductService extends BaseService<Product, Integer> implements IPr
         }
 
         return (List<Product>) this.productRepository.findAll();
+    }
+
+    @Override
+    public Product getProduct(Item item) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getProduct'");
     }
 }
