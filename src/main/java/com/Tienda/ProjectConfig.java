@@ -22,9 +22,8 @@ import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 @Configuration //Decorador or tag
 public class ProjectConfig implements WebMvcConfigurer {
 
-/* localeResolver se utiliza para crear una sesión de cambio de idioma*/
+    /* localeResolver se utiliza para crear una sesión de cambio de idioma*/
     //Funciones que ejecuta springboot a la hora de configurarse
-
     @Bean
     public LocaleResolver localeResolver() {
         var slr = new SessionLocaleResolver();
@@ -63,18 +62,20 @@ public class ProjectConfig implements WebMvcConfigurer {
         registry.addViewController("/login").setViewName("login");
         registry.addViewController("/admin").setViewName("admin");
         registry.addViewController("/product").setViewName("product");
+        registry.addViewController("/registro").setViewName("registro");
+        registry.addViewController("/reportes").setViewName("reportes");
     }
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests((request) -> request
-                        .requestMatchers("/", "/index", "/errores/**", "/js/**", "/css/**", "/icons/**", "/img/**", "/webfonts/**")
-                        .permitAll()
-                        .requestMatchers("/", "/index","/product/**", "/category/**", "/api/**","/admin/**", "/registro/**", "/activa/**", "/salida/**", "/reportes/**","/user")
-                        .hasRole("ADMIN"))
+                .requestMatchers("/", "/index", "/errores/**", "/js/**", "/css/**", "/icons/**", "/img/**", "/webfonts/**")
+                .permitAll()
+                .requestMatchers("/", "/index", "/product/**", "/category/**", "/api/**", "/admin/**", "/registro/**", "/activa/**", "/salida/**", "/reportes/**", "/user")
+                .hasRole("ADMIN"))
                 .formLogin((form) -> form.loginPage("/login")
-                        .permitAll()
-                        .defaultSuccessUrl("/", true))
+                .permitAll()
+                .defaultSuccessUrl("/", true))
                 .logout(LogoutConfigurer::permitAll)
                 .csrf().disable().cors();//this line is important to allow ajax request from the js
         return http.build();
