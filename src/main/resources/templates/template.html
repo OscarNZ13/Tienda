@@ -26,7 +26,7 @@
     <nav class="navbar navbar-expand-lg navbar-light shadow" th:fragment="header">
         <div class="container d-flex justify-content-between align-items-center">
 
-            <a class="navbar-brand text-success logo h1 align-self-center" href="@{/}">
+            <a class="navbar-brand text-success logo h1 align-self-center" href="/">
                 Kokar'Shop
             </a>
 
@@ -43,7 +43,7 @@
                         autorizacion a la seccion solamente a los usuarios con rol admin-->
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto" sec:authorize="hasRole('ROLE_ADMIN') or hasRole('ROLE_VENDEDOR') or hasRole('ROLE_USER')">
                         <li class="nav-item">
-                            <a class="nav-link" href="@{/}">Home</a>
+                            <a class="nav-link" href="/">Home</a>
                         </li>
                         <!-- sec:authorize="hasRole('ROLE_ADMIN')" esta linea da 
                         autorizacion a la seccion solamente a los usuarios con rol admin-->
