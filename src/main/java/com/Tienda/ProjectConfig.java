@@ -68,9 +68,9 @@ public class ProjectConfig implements WebMvcConfigurer {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests((request) -> request
-                        .requestMatchers("/", "/index", "/errores/**", "/js/**", "/css/**", "/icons/**", "/img/**", "/webfonts/**","/user")
+                        .requestMatchers("/", "/index", "/errores/**", "/js/**", "/css/**", "/icons/**", "/img/**", "/webfonts/**")
                         .permitAll()
-                        .requestMatchers("/product/**", "/category/**", "/api/**","/admin/**", "/registro/**", "/activa/**", "/salida/**")
+                        .requestMatchers("/", "/index","/product/**", "/category/**", "/api/**","/admin/**", "/registro/**", "/activa/**", "/salida/**", "/reportes/**","/user")
                         .hasRole("ADMIN"))
                 .formLogin((form) -> form.loginPage("/login")
                         .permitAll()
@@ -79,7 +79,6 @@ public class ProjectConfig implements WebMvcConfigurer {
                 .csrf().disable().cors();//this line is important to allow ajax request from the js
         return http.build();
     }
-
 
     @Autowired
     private UserDetailsService userDetailsService;
