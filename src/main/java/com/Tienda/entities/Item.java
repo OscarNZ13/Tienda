@@ -1,5 +1,8 @@
 package com.Tienda.entities;
 
+import lombok.EqualsAndHashCode;
+
+@EqualsAndHashCode(callSuper=false)
 public class Item extends Product {
     private int cantidad; // Almacenar la cantidad de items de un articulo
 
